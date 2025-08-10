@@ -38,7 +38,6 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     ros-${ROS_DISTRO}-desktop \
-    ros-humble-tf-transformations \
     python3-colcon-common-extensions \
     ros-dev-tools
 
@@ -115,13 +114,13 @@ RUN pip install -r /requirements.txt
 
 
 # Install Gazebo Garden
-# RUN wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
-# RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
-# RUN apt update && apt install -y \
-#     gz-garden \
-#     python3-sdformat13 \
-#     ros-$ROS_DISTRO-ros-gzgarden \
-#     ros-$ROS_DISTRO-xacro
+RUN wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
+RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+RUN apt update && apt install -y \
+    gz-garden \
+    python3-sdformat13 \
+    ros-$ROS_DISTRO-ros-gzgarden \
+    ros-$ROS_DISTRO-xacro
 
 
 # Kill the bell!

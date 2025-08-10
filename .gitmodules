@@ -1,6 +1,10 @@
+[submodule "home/arcturus/dev_ws/src/all_seaing_vehicle"]
+	path = home/arcturus/dev_ws/src/all_seaing_vehicle
+	url = git@github.com:ArcturusNavigation/all_seaing_vehicle.git
+	branch = main
+[submodule "home/arcturus/vrx_ws/src/vrx"]
+	path = home/arcturus/vrx_ws/src/vrx
+	url = git@github.com:ArcturusNavigation/vrx.git
 [submodule "home/arcturus/dev_ws/src/ros2-keyboard"]
 	path = home/arcturus/dev_ws/src/ros2-keyboard
 	url = git@github.com:ArcturusNavigation/ros2-keyboard.git
-[submodule "home/arcturus/dev_ws/src/all_seaing_boat"]
-	path = home/arcturus/dev_ws/src/all_seaing_boat
-	url = https://github.com/ArcturusNavigation/all_seaing_boat

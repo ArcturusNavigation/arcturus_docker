@@ -2,7 +2,7 @@ services:
   arcturus:
     privileged: true
     build: .
-    image: popkarsd/arcturus_onboarding:aarch64
+    image: toyat522/arcturus:x86_64
     ports:
       - 6080:6080 # VNC
       - 11311:11311 # ROS master
